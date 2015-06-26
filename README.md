@@ -42,11 +42,11 @@ $ cd plugins/hello-world
 $ go build
 ```
 
-You should get an executable called "hello-world". Congratulations, this is your plugin.
+你将得到一个可执行文件 "hello-world". 祝贺你，它就是你的插件.
 
-Now, time to use the newly create plugin.
+现在，是时候使用刚刚生成的插件了.
 
-In your main executable, invoke the plugin you have just created:
+在你的主程序中, 调用刚刚生成的插件:
 
 ```go
 package main
@@ -75,8 +75,7 @@ func main() {
 }
 ```
 
-Now, build your executable and all should work!  Remember to use the correct path to
-your plugins when you make the Plugin object.  Ideally, always pass an absolute path.
+现在，编译你的执行文件，所有的将正常运行! 记住，必须使用之前的插件路径。理想情况是，传递绝对路径.
 
 ## Bugs
 
