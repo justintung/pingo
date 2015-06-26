@@ -1,18 +1,15 @@
 # Pingo: Plugins for Go
 
-Pingo is a simple standalone library to create plugins for your Go program. As Go is statically
-linked, all plugins run as external processes.
+Pingo 是一个用来为 Go 程序编写插件的简单独立库，因为 Go 本身是静态链接的，因此所有插件都以外部进程方式存在。
 
-The library aims to be as simple as possible and to mimic the standard RPC package to be
-immediately familiar to most developers.
+Pingo 旨在简化标准 RPC 包，支持 TCP 和 Unix 套接字作为通讯协议。
 
-Pingo supports both TCP and Unix as communication protocols. However, remote plugins are currently
-not supported.  Remote plugins might be implemented if requested.
+当前还不支持远程插件，如果有需要，远程插件很快会提供。
+
 
 ## Example
 
-Create a new plugin. Make a directory named after the plugin (for example "plugins/hello-world")
-and write "main.go" as follows:
+使用 Pingo 创建一个插件非常简单，首先新建目录，如 "plugins/hello-world" ，然后在该目录下编写 main.go:
 
 ```go
 // Always create a new binary
@@ -39,7 +36,7 @@ func main() {
 }
 ```
 
-And compile it:
+编译:
 ```sh
 $ cd plugins/hello-world
 $ go build
